@@ -1,0 +1,8 @@
+.fixed_size{
+    width:400px;
+    height: 150px;
+}
+.text{
+    text-decoration: none;
+    color: black;
+}

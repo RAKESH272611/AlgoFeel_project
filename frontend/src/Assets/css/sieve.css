@@ -1,0 +1,43 @@
+.SE{
+    padding-top: 20px;
+    background-color: antiquewhite;
+}
+.sieve{
+    margin-left:30px;
+    margin-bottom: 40px;
+    margin-right: 30px;
+    background-color: antiquewhite;
+    border: 1px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+    padding: 20px
+}
+.primeVal{
+    
+    background-color: antiquewhite;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+    padding-left: 50px;
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+.primes{
+    margin-left: 50px;
+    display: flex;
+    justify-content: center;
+    color: green
+}
+
+.visual{
+    margin-left: 620px;
+    margin-bottom: 16px;
+}
+
+.spc{
+    margin-right: 80px;
+}

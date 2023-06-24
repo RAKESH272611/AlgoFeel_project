@@ -1,0 +1,20 @@
+.b-val{
+    height: calc(var(--item) * 5px);
+    width: calc(100vw / var(--size));
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sortSuccess{
+    background-color: green;
+}
+
+.sortNotSuccess{
+    background-color: white;
+}
+
+.sortTraverse{
+    background-color: orange;
+}

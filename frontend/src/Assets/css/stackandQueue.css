@@ -1,0 +1,56 @@
+.SQ{
+    padding-top: 20px;
+    background-color: antiquewhite;
+}
+.widthQ{
+    height: 328px;
+}
+.widthS{
+    height: 600px;
+}
+.stack{
+    margin-top: 40px;
+    margin-left:650px;
+    padding-top: 10px;
+    background-color: yellow;
+    border: 1px solid black;
+    border-top-color: antiquewhite;
+    width:200px;
+    height: 550px;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: flex-start;
+    align-items: center;
+    gap:2px
+}
+.queue{
+    margin-top: 200px;
+    margin-left: 160px;
+    margin-right: 100px;
+    background-color: yellow;
+    border: 1px solid black;
+    border-left-color: antiquewhite;
+    border-right-color: antiquewhite;
+    width:1200px;
+    height:200px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2px;
+}
+.lb{
+    margin-left: 30px;
+}
+.push{
+    margin-left: 360px;
+}
+.pop{
+    margin-left: 30px;
+}
+button{
+    background-color: skyblue;
+}
+#element{
+    width: 150px;
+}

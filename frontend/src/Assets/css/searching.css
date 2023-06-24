@@ -1,0 +1,21 @@
+.search{
+    padding: 20px;
+    background-color: antiquewhite;
+    height: 595px;
+}
+.array{
+    margin:30px;
+    background-color: antiquewhite;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+.lb{
+    margin-left: 30px;
+}
+.sz{
+    margin-left: 260px;
+}
+button{
+    background-color: skyblue;
+}

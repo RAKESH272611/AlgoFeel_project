@@ -1,0 +1,31 @@
+.sort{
+    padding: 20px;
+    background-color: antiquewhite;
+}
+.B_array{
+    margin-bottom: 40px;
+    margin-left: 20px;
+    margin-right: 20px;
+    background-color: antiquewhite;
+    display: flex;
+    
+    justify-content: center;
+
+}
+
+.size-gen{
+    display: flex;
+    justify-content: center;
+}
+
+.sortButton{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+#dropdown-basic-button{
+    margin-top: 40px;
+    margin-left: 710px;
+}

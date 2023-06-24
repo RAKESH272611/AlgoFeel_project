@@ -1,0 +1,20 @@
+.se_val{
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.yes_prime{
+    background-color: green;
+}
+
+.not_prime{
+    background-color: red;
+}
+
+.not_valued{
+    background-color: white;
+}
