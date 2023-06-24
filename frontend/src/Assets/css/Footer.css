@@ -1,13 +1,42 @@
-.footer {
-    background-color: #121212;
-    color: white;
-    padding: 20px;
-    text-align: center;
-  }
-  
-  .container {
-    max-width: 860px;
-    margin: 0 auto;
-  }
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
 
-  
+.container {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.footer {
+  background-color: #121212;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.content {
+  flex: 1;
+}
+
+.social-media {
+  margin-top: 10px;
+}
+
+.social-media a {
+  color: white;
+  margin-right: 10px;
+  text-decoration: none;
+}
+
+.social-media a:hover {
+  text-decoration: underline;
+}

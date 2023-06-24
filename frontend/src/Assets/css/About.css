@@ -1,0 +1,48 @@
+.about-section {
+    padding: 60px 0;
+    background-color: #f5f5f5;
+    text-align: center;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .about-heading {
+    font-size: 36px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .about-description {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 40px;
+  }
+  
+  .feature-heading,
+  .learn-heading,
+  .future-heading {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
+  }
+  
+  .feature-list,
+  .learn-description,
+  .future-description {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 30px;
+  }
+  
+  .feature-item {
+    margin-bottom: 10px;
+  }
+  
+  /* Add additional CSS styles as needed */
+  
+  

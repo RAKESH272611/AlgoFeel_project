@@ -11,9 +11,12 @@ const Home = () => {
     )
   });
   return (
-    <div className='algo'>
-       {algoview}
+    <div className='home'>
+    <h2 className='home-heading'>Explore Algorithms</h2>
+    <div className='algos-container'>
+      {algoview}
     </div>
+  </div>
   )
 }
 

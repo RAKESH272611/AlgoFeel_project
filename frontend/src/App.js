@@ -9,14 +9,16 @@ import StackAndQueue from './Component/StackAndQueue.jsx'
 import SegmentTree from './Component/SegmentTree.jsx'
 import Header from './Component/Header.jsx';
 import Footer from './Component/Footer.jsx';
+import About from './Component/About.jsx';
+import Contact from './Component/Contact.jsx';
 
 
 
 function App() {
   return (
     <div className="App">
-      <Header/>
       <BrowserRouter>
+      <Header/>
       <Routes>
       <Route path="/" element={<Home/>}/> 
       <Route path="/algoVisualize/sorting" element={<Sorting/>}/>
@@ -25,9 +27,11 @@ function App() {
       <Route path="/algoVisualize/segmentTree" element={<SegmentTree/>}/>
       <Route path="/algoVisualize/SieveOfEratosthenes" element={<SieveOfEratosthenes/>}/>
       <Route path="/algoVisualize/graphAlgo" element={<GraphAlgo/>}/>
+      <Route path="/about" element={<About/>}/>
+      <Route path="/contact" element={<Contact/>}/>
       </Routes>
-      </BrowserRouter>
       <Footer/>
+      </BrowserRouter>
     </div>
   );
 }
