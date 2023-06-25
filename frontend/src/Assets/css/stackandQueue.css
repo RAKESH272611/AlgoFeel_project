@@ -1,56 +1,94 @@
-.SQ{
+.SQ {
     padding-top: 20px;
-    background-color: antiquewhite;
-}
-.widthQ{
-    height: 328px;
-}
-.widthS{
+    background-color: #f2f2f2;
+  }
+  
+  .widthQ {
     height: 600px;
-}
-.stack{
+    display: flex;
+    align-items: center;
+  }
+  
+  .widthS {
+    height: 600px;
+  }
+  
+  .stack {
     margin-top: 40px;
-    margin-left:650px;
+    margin-left: auto;
+    margin-right: auto;
     padding-top: 10px;
-    background-color: yellow;
+    background-color: rgb(231, 225, 225);
     border: 1px solid black;
-    border-top-color: antiquewhite;
-    width:200px;
+    border-top-color: #f2f2f2;
+    width: 200px;
     height: 550px;
     display: flex;
     flex-direction: column-reverse;
     justify-content: flex-start;
     align-items: center;
-    gap:2px
-}
-.queue{
-    margin-top: 200px;
-    margin-left: 160px;
-    margin-right: 100px;
-    background-color: yellow;
+    gap: 2px;
+  }
+  
+  .queue {
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(231, 225, 225);
     border: 1px solid black;
-    border-left-color: antiquewhite;
-    border-right-color: antiquewhite;
-    width:1200px;
-    height:200px;
+    border-top-color: #f2f2f2;
+    width: 80%;
+    max-width: 1200px;
+    height: 200px;
     display: flex;
     flex-direction: row-reverse;
     justify-content: flex-start;
     align-items: center;
     gap: 2px;
-}
-.lb{
+  }
+  
+  .lb {
     margin-left: 30px;
-}
-.push{
-    margin-left: 360px;
-}
-.pop{
+  }
+  
+  .push {
     margin-left: 30px;
-}
-button{
-    background-color: skyblue;
-}
-#element{
+  }
+  
+  .pop {
+    margin-left: 30px;
+  }
+  
+  button {
+    background-color: #4ea8ed;
+    color: #ffffff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  button:hover {
+    background-color: #3792cc;
+  }
+  
+  button.active {
+    background-color: #3179a6;
+  }
+  
+  input {
+    padding: 8px 10px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  
+  #element {
     width: 150px;
-}
+  }
+  
+  #element:focus {
+    outline: none;
+    border-color: #4ea8ed;
+  }
+  

@@ -1,6 +1,17 @@
-.Nav{
-    height: 70px;
-}
-.nav_end{
-    margin-left: 300px;
-}
+.nav-link {
+    margin: 0;
+  }
+  .Nav {
+    min-height: 80px;
+  }
+  
+  .navbar-brand {
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  .header {
+    visibility: visible; 
+  }
+    

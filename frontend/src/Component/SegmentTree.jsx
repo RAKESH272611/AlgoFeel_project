@@ -257,10 +257,12 @@ const SegmentTree = () => {
       <svg ref={segTreeRef} style={{ width: '100%', height: '100%' }}></svg>
     </div>
     <div className="gen_array">
-    <button onClick={generateArray} className='new_segArray'>Generate New Array</button>
     <b>Array : </b>
     {n_arr}
-    <button onClick={cleanTree} className='cleanTree'>Clean</button>
+    </div>
+    <div className="gen_cln">
+    <button onClick={generateArray} className='new_segArray'>Generate New Array</button>
+    <button onClick={cleanTree} className='cleanTree'>Clean Tree</button>
     </div>
     <div className="fns">
        <span className="range_query">

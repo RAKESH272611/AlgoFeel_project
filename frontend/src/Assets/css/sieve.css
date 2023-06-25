@@ -34,8 +34,9 @@
 }
 
 .visual{
-    margin-left: 620px;
-    margin-bottom: 16px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
 }
 
 .spc{
