@@ -37,22 +37,24 @@ const StackAndQueue = () => {
 
   return (
     <div className='SQ'>
-       <span className='lb'>
+       <div className='lb'>
+        <div>
        <Button onClick={toStack} variant="primary" size="lg" className={isStack?'active':''} >
         Stack
       </Button>{' '}
       <Button onClick={toQueue} variant="primary" size="lg" className={!isStack?'active':''} >
         Queue
       </Button>
-      </span>
-      <span className='push'>
+      </div>
+      <div className='push'>
        <input onChange={(e)=>setValueInserted(e.target.value)} type="text" name='element' id='element' placeholder='Element'/>
        <button onClick={push_element}>Push Element</button>
-       </span>
+       </div>
 
-       <span className='pop'>
+       <div className='pop'>
        <button onClick={pop_element}>Pop Element</button>
-       </span>
+       </div>
+      </div>
        <div className={isStack?"widthS":"widthQ"}>
        <div className={isStack?"stack":"queue"}>
         {st}

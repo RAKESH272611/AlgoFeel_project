@@ -35,7 +35,8 @@
     margin-right: auto;
     background-color: rgb(231, 225, 225);
     border: 1px solid black;
-    border-top-color: #f2f2f2;
+    border-left-color: #f2f2f2;
+    border-right-color: #f2f2f2;
     width: 80%;
     max-width: 1200px;
     height: 200px;
@@ -47,16 +48,12 @@
   }
   
   .lb {
-    margin-left: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
   }
   
-  .push {
-    margin-left: 30px;
-  }
-  
-  .pop {
-    margin-left: 30px;
-  }
+ 
   
   button {
     background-color: #4ea8ed;
