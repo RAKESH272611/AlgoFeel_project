@@ -12,8 +12,8 @@ const GraphAlgo = () => {
 
   useEffect(() => {
     const svg = d3.select(graphRef.current);
-    const width = 1500; // Width of the SVG container
-    const height = 300; // Height of the SVG container
+    const width = window.innerWidth; // Width of the SVG container
+    const height = window.innerHeight*0.5; // Height of the SVG container
     const nodeRadius = 20; // Radius of the nodes
   
     // Generate random data for nodes
@@ -51,24 +51,25 @@ const GraphAlgo = () => {
     const nodeSpacing = 100; // Spacing between nodes
     
     const fixedNodePositions = [
-      {id:0, x:758, y:50},
-      {id:1, x:560, y:140},
-      {id:2, x:650, y:160},
-      {id:3, x:730, y:155},
-      {id:4, x:830, y:140},
-      {id:5, x:910, y:120},
-      {id:6, x:460, y:230},
-      {id:7, x:530, y:235},
-      {id:8, x:600, y:230},
-      {id:9, x:690, y:220},
-      {id:10, x:760, y:220},
-      {id:11, x:950, y:200},
-      {id:12, x:380, y:300},
-      {id:13, x:520, y:300},
-      {id:14, x:740, y:300},
-      {id:15, x:1020, y:260},
-    ]
-  
+      { id: 0, x: width * 0.5, y: height * 0.1 },
+      { id: 1, x: width * 0.3, y: height * 0.35 },
+      { id: 2, x: width * 0.4, y: height * 0.4 },
+      { id: 3, x: width * 0.5, y: height * 0.375 },
+      { id: 4, x: width * 0.6, y: height * 0.35 },
+      { id: 5, x: width * 0.7, y: height * 0.3 },
+      { id: 6, x: width * 0.2, y: height * 0.6 },
+      { id: 7, x: width * 0.3, y: height * 0.62 },
+      { id: 8, x: width * 0.4, y: height * 0.6 },
+      { id: 9, x: width * 0.5, y: height * 0.55 },
+      { id: 10, x: width * 0.6, y: height * 0.55 },
+      { id: 11, x: width * 0.8, y: height * 0.5 },
+      { id: 12, x: width * 0.1, y: height * 0.9 },
+      { id: 13, x: width * 0.3, y: height * 0.9 },
+      { id: 14, x: width * 0.6, y: height * 0.9 },
+      { id: 15, x: width * 0.9, y: height * 0.8 },
+    ];
+
+    
     // Render links
     svg
       .selectAll('line')

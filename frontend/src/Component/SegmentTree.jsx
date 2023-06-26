@@ -159,8 +159,8 @@ const SegmentTree = () => {
 
   useEffect(() => {
     const svg = d3.select(segTreeRef.current);
-    const width = 1500; // Width of the SVG container
-    const height = 300; // Height of the SVG container
+    const width = window.innerWidth; // Width of the SVG container
+    const height = window.innerHeight*0.5; // Height of the SVG container
     const nodeRadius = 36; // Radius of the nodes
   
     // Generate random data for nodes
@@ -177,12 +177,12 @@ const SegmentTree = () => {
     }
   
     // Fixed node positions
-    let w = 758;
-    let h = 70;
+    let w = width/2;
+    let h = height/6;
     let j = 0;
     let cnt = 1;
-    let d = 375;
-    let s = 1500;
+    let d = width/4;
+    let s = width-width/100;
     const fixedNodePositions = []
     while(j<31){
       let ct = 0;
@@ -251,32 +251,44 @@ const SegmentTree = () => {
       .text((d) => d.value);
   }, [segmentTree,orangeNodes,greenNodes]);
 
+  if(window.innerWidth<1300){
+    const divStyle = {
+      height: window.innerHeight + 'px',
+      display:'flex',
+      justifyContent:'center',
+       alignItems:'center'
+    };
+    return (
+       <div style={divStyle}>
+        <h2>Make your screen wider</h2>
+       </div>
+    );
+  }
+
   return (
     <div className="segweb">
       <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: 'calc(100vh - 350px)' }}>
       <svg ref={segTreeRef} style={{ width: '100%', height: '100%' }}></svg>
     </div>
     <div className="gen_array">
-    <b>Array : </b>
-    {n_arr}
-    </div>
-    <div className="gen_cln">
     <button onClick={generateArray} className='new_segArray'>Generate New Array</button>
-    <button onClick={cleanTree} className='cleanTree'>Clean Tree</button>
+    <b>Array: </b>
+    {n_arr}
+    <button onClick={cleanTree} className='cleanTree'>Clean</button>
     </div>
     <div className="fns">
        <span className="range_query">
        <button onClick={querySegTRee}>Query</button>
-          <input onChange={(e)=>setLeftRange(parseInt(e.target.value))} type="number" placeholder='left_range'/>
-          <input onChange={(e)=>setRightRange(parseInt(e.target.value))} type="number" placeholder='right_range'/>
+          <input className='short-input' onChange={(e)=>setLeftRange(parseInt(e.target.value))} type="number" placeholder='left_range'/>
+          <input className='short-input' onChange={(e)=>setRightRange(parseInt(e.target.value))} type="number" placeholder='right_range'/>
        </span>
         <span className="rangeAns">
           {rangeValue!==-1?<b>{rangeValue}</b>:""}
         </span>
        <span className="seg_update">
           <button onClick={updateSegTree}>Update</button>
-          <input onChange={(e)=>setUpdateIndex(parseInt(e.target.value))} type="number" placeholder='index'/>
-          <input onChange={(e)=>setUpdateValue(parseInt(e.target.value))} type="number" placeholder='value'/>
+          <input className='short-input' onChange={(e)=>setUpdateIndex(parseInt(e.target.value))} type="number" placeholder='index'/>
+          <input className='short-input' onChange={(e)=>setUpdateValue(parseInt(e.target.value))} type="number" placeholder='value'/>
        </span>
     </div>
     <div className="sum-max">
