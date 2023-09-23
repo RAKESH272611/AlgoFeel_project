@@ -6,6 +6,7 @@ import '../Assets/css/Algoview.css';
 const AlogView = (props) => {
   return (
     <div className="col-md-4 mb-4">
+       <Link className='algo-link1' to={`/algoVisualize/${props.link}`}>
       <Card className='algo-card'>
         <Card.Img className='algo-image' variant='top' src={props.image} />
         <Card.Body>
@@ -17,6 +18,7 @@ const AlogView = (props) => {
           <Card.Text>{props.description}</Card.Text>
         </Card.Body>
       </Card>
+      </Link>
     </div>
   );
 };

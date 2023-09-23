@@ -11,6 +11,8 @@ const Sorting = () => {
   const [width,setWidth] = useState(20);
   const [typeSort,setTypeSort] = useState("Bubble Sort");
   const [sortColor,setSortColor] = useState([]);
+  const [speed, setSpeed] = useState(310);
+  const [sliderValue,setSliderValue] = useState(2700);
 
   const generateArray = () => {
     setWidth(size);
@@ -84,7 +86,7 @@ const Sorting = () => {
         
         return newArr; 
       });
-    }, 500);
+    }, speed);
   };
   
 
@@ -109,6 +111,14 @@ const Sorting = () => {
     setSortColor(arr);
   }
 
+  const handleSpeedChange = (event) => {
+    const newSpeed = parseFloat(event.target.value);
+    setSpeed(3010-newSpeed);
+    setSliderValue(newSpeed);
+    console.log(newSpeed);
+    // Update your algorithm animation speed here based on 'newSpeed'
+  };
+
   
   useEffect(()=>{
     generateArray();
@@ -129,7 +139,15 @@ const Sorting = () => {
       </div>
 
       <div className="sortButton">
-    <button onClick={startSort}>Visualize</button>
+    <button onClick={startSort}>Visualize</button>{' '}
+    <input
+        type="range"
+        min="10"
+        max="3000"
+        step="40"
+        value={sliderValue}
+        onChange={handleSpeedChange}
+      />{' '}
     <button onClick={resetSortColor}>Clean</button>
       </div>
 

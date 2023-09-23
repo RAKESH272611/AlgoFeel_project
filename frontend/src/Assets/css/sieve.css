@@ -36,9 +36,11 @@
 .visual{
     display: flex;
     justify-content: center;
-    margin-bottom: 20px;
+    gap: 30px;
+    /* margin-bottom: 40px; */
+    padding-bottom: 40px;
 }
 
-.spc{
+/* .spc{
     margin-right: 80px;
-}
+} */

@@ -19,12 +19,19 @@ const Searching = () => {
   const [elementFound,setElementFound] = useState(false);
   const [lower_range,setLower_range] = useState(-1);
   const [higher_range,setHigher_range] = useState(-1);
+  const [speed, setSpeed] = useState(500);
+  const [sliderValue,setSliderValue] = useState(2600);
+  const [scheduled, setScheduled] = useState([]);
   const fixSize = (e) => {
      setSize(e.target.value);
   }
   const generateArray = () => {
     let sz = size;
     if(sz===0) sz = 14;
+    if(sz<6 || sz>70){
+      showWarningNotification();
+    }
+    else{
      arr = new Array(sz);
      for(let i = 0; i<sz; i++){
      arr[i] = Math.floor((Math.random() * 1000) + 1);
@@ -33,10 +40,13 @@ const Searching = () => {
       arr.sort(function(a, b){return a - b});
      }
      setArray(arr);
+    }
   }
 
   const fliptoLinearSearch = () => {
     setIsBinarySearch(0);
+    setSpeed(500);
+    setSliderValue(2600);
   }
 
   const fliptoBinarySearch = () => {
@@ -44,6 +54,8 @@ const Searching = () => {
     let a = array;
     a.sort(function(a, b){return a - b});
     setArray(a);
+    setSpeed(1000);
+    setSliderValue(2100);
   }
 
   const searchElement = () => {
@@ -82,7 +94,7 @@ const Searching = () => {
 
       setHighlightedIndex(index);
       index++;
-    }, 500);
+    }, speed);
   }
 
   const BinarySearch = () =>  {
@@ -110,6 +122,9 @@ const Searching = () => {
         setHigher_range(-1);
         return;
       }
+      setHighlightedIndex(mid);
+      setTimeout(() => {
+        
       if(array[mid]==valueSearch){
         flag++;
         setElementFound(true);
@@ -122,9 +137,8 @@ const Searching = () => {
         low = mid+1;
         setLower_range(low);
       }
-
-      setHighlightedIndex(mid);
-    }, 2000);
+    }, speed/2);
+    }, speed);
   }
 
   const arrValue = array.map((val,index)=>{
@@ -148,6 +162,21 @@ const Searching = () => {
     });
   };
 
+  const showWarningNotification = () => {
+    toast.warning('Data size is out of range. Please enter a value between 6 and 70.',{
+      position: toast.POSITION.TOP_CENTER,
+      autoClose: 1000
+    });
+  }
+
+  const handleSpeedChange = (event) => {
+    const newSpeed = parseFloat(event.target.value);
+    setSpeed(3100-newSpeed);
+    setSliderValue(newSpeed);
+    // console.log(newSpeed);
+    // Update your algorithm animation speed here based on 'newSpeed'
+  };
+
   
 
   return (
@@ -156,6 +185,14 @@ const Searching = () => {
        <Button onClick={fliptoLinearSearch} variant="primary" size="lg" className={isBinarySearch===0?"active":""}>
         Linear Search
       </Button>{' '}
+      <input
+        type="range"
+        min="100"
+        max="3000"
+        step="10"
+        value={sliderValue}
+        onChange={handleSpeedChange}
+      />{' '}
       <Button onClick={fliptoBinarySearch} variant="primary" size="lg" className={isBinarySearch===1?"active":""} >
         Binary Search
       </Button>

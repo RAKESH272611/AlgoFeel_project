@@ -8,6 +8,8 @@ const GraphAlgo = () => {
 
   const [visitedNodes, setVisitedNodes] = useState([]);
   const [graph,setGraph] = useState([]);
+  const [speed, setSpeed] = useState(350);
+  const [sliderValue,setSliderValue] = useState(2700);
   const graphRef = useRef(null);
 
   useEffect(() => {
@@ -137,7 +139,7 @@ const GraphAlgo = () => {
           queue.push(adjNode);
         }
       });
-    }, 1000); // Change the interval as per your requirement
+    }, speed); // Change the interval as per your requirement
     console.log(graph);
   };
 
@@ -163,8 +165,16 @@ const GraphAlgo = () => {
           stack.push(adjNode);
         }
       });
-    }, 1000); // Change the interval as per your requirement
+    }, speed); // Change the interval as per your requirement
     
+  };
+
+  const handleSpeedChange = (event) => {
+    const newSpeed = parseFloat(event.target.value);
+    setSpeed(3050-newSpeed);
+    setSliderValue(newSpeed);
+    // console.log(newSpeed);
+    // Update your algorithm animation speed here based on 'newSpeed'
   };
 
   const v_nodes = visitedNodes.map((item)=>{
@@ -192,6 +202,16 @@ const GraphAlgo = () => {
       </Button>
 
     </div>
+    <div className='speed'>
+    <input 
+        type="range"
+        min="50"
+        max="3000"
+        step="30"
+        value={sliderValue}
+        onChange={handleSpeedChange}
+      />
+      </div>
     </>
   );
 };

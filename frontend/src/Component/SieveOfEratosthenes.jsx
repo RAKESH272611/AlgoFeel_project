@@ -6,6 +6,8 @@ import PrimeNumber from './PrimeNumber';
 
 const SieveOfEratosthenes = () => {
   const [visitedArray,setVisitedArray] = useState(Array.from({ length: 100 }, () => -1));
+  const [speed, setSpeed] = useState(100);
+  const [sliderValue,setSliderValue] = useState(910);
 
   const array = [];
   for(let i = 1; i<=100; i++){
@@ -44,8 +46,16 @@ const SieveOfEratosthenes = () => {
         return updatedVisitedArray;
       })
     
-    }, 100);
+    }, speed);
   }
+
+  const handleSpeedChange = (event) => {
+    const newSpeed = parseFloat(event.target.value);
+    setSpeed(1010-newSpeed);
+    setSliderValue(newSpeed);
+    // console.log(newSpeed);
+    // Update your algorithm animation speed here based on 'newSpeed'
+  };
 
   const initialise = () => {
       setVisitedArray(Array.from({ length: 100 }, () => -1));
@@ -76,6 +86,14 @@ const SieveOfEratosthenes = () => {
     <Button className='spc' onClick={startSieve} >
         <h4>Visualize</h4>
       </Button>
+      <input 
+        type="range"
+        min="10"
+        max="1000"
+        step="10"
+        value={sliderValue}
+        onChange={handleSpeedChange}
+      />
       <Button>
         <h4 onClick={initialise}>Clean</h4>
       </Button>

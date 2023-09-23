@@ -4,7 +4,7 @@
     justify-content: center;
     gap: 50px;
     margin-top: 32px;
-    margin-bottom: 66px;
+    margin-bottom: 36px;
   }
 
   .visNodes{
@@ -13,5 +13,10 @@
     flex-wrap: wrap;
     height: auto;
     gap: 13px;
+  }
+
+  .speed{
+    display: flex;
+    justify-content: center;
   }
   

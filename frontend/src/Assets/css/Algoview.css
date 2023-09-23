@@ -21,6 +21,11 @@
   font-weight: bold;
 }
 
+.algo-link1 {
+  text-decoration: none;
+  color: #333;
+}
+
 .algo-link:hover {
   color: #555;
 }
